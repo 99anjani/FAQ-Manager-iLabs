@@ -1,5 +1,6 @@
 package com.ilabs.backend.controller;
 
+import com.ilabs.backend.exception.QuestionNotFoundException;
 import com.ilabs.backend.model.QuestionDetails;
 import com.ilabs.backend.repository.QuestionDetailsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@CrossOrigin("http://localhost:3001/")
+@CrossOrigin("http://localhost:3000/")
 public class QuestionDetailController {
     @Autowired
     private QuestionDetailsRepository questionDetailsRepository;
@@ -25,5 +26,19 @@ public class QuestionDetailController {
         return questionDetailsRepository.findAll();
     }
 
+    @GetMapping("/questionDetails/{id}")
+        QuestionDetails getQuestionById(@PathVariable Long id){
+            return questionDetailsRepository.findById(id)
+                .orElseThrow(()->new QuestionNotFoundException(id));
+
+        }
+    @DeleteMapping("/questionDetails/{id}")
+    String deleteUser(@PathVariable Long id){
+        if (!questionDetailsRepository.existsById(id)){
+            throw new QuestionNotFoundException(id);
+        }
+        questionDetailsRepository.deleteById(id);
+        return "Question with id "+id+" deleted successful!";
+    }
 
 }
