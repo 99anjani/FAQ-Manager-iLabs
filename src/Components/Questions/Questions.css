@@ -1,6 +1,6 @@
 .question-table {
   margin: 3%;
-  min-height: 70vh;
+  min-height: 50vh;
 }
 .published-button {
   background-color: #35c335;
@@ -18,4 +18,3 @@
   background-color: transparent;
   border-color: transparent;
 }
-

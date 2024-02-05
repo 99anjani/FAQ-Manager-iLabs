@@ -4,19 +4,20 @@ import Questions from "./Components/Questions/Questions";
 import Navbar from "./Components/Navbar/Navbar";
 import Footer from "./Components/Footer/Footer";
 import AddQuestions from "./Components/Questions/AddQuestions";
+import Search from "./Components/Search/Search";
+
+
 
 function App() {
   return (
     <div className="App">
-      {/* <Navbar/>
-      <Questions />
-      <Footer/> */}
-
       <Router>
         <Navbar />
+
         <Routes>
-          <Route exact path="/" element={<Questions />} />
-          <Route path="/addQuestion" element={<AddQuestions/>}/>
+          <Route exact path="/" element={<Search />} />
+
+          <Route path="/addQuestion" element={<AddQuestions />} />
         </Routes>
         <Footer />
       </Router>
