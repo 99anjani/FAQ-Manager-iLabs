@@ -1,5 +1,5 @@
 # FAQ-Manager-iLabs
-
+Details: An application that can get question details has been developed using react and spring-boot
 
 Frontend Setup:
 Clone the repository.
