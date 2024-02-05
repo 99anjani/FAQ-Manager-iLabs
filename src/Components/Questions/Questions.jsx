@@ -1,6 +1,7 @@
 import React, { Component, useEffect, useState } from "react";
 import "./Questions.css";
 import axios from "axios";
+import Action from "../Action/Action";
 
 function Questions() {
   const [QuestionDetails, setQuestionDetails] = useState([]);
@@ -12,6 +13,9 @@ function Questions() {
     const result = await axios.get("http://localhost:8080/questionDetails");
     setQuestionDetails(result.data);
   };
+
+  // const [modalOpen, setModalOpen] = useState(false);
+
   return (
     <div className="question-table">
       <table className="table table-hover">
@@ -40,7 +44,14 @@ function Questions() {
                 )}
               </td>
               <td>
-                <button className="action-btn">...</button>
+                <button
+                  className="action-btn"
+                  // onClick={() => setModalOpen(true)}
+                >
+                  ...
+                </button>
+
+                {/* {modalOpen && <Action />} */}
               </td>
             </tr>
           ))}
