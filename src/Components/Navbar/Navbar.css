@@ -1,6 +1,11 @@
 .navbar {
   background-color: #cdc9f1;
 }
+.container-fluid {
+  margin-top: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+}
 .add-question-button {
   background-color: #a9a2e0;
 }

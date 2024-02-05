@@ -3,17 +3,17 @@ import "./Questions.css";
 import axios from "axios";
 
 function Questions() {
-  const [Questiondetais, setQuestiondetails] = useState([]);
+  const [QuestionDetails, setQuestionDetails] = useState([]);
   useEffect(() => {
     loadQuestionDetails();
   }, []);
 
   const loadQuestionDetails = async () => {
     const result = await axios.get("http://localhost:8080/questionDetails");
-    setQuestiondetails(result.data);
+    setQuestionDetails(result.data);
   };
   return (
-    <div className="question-table card">
+    <div className="question-table">
       <table className="table table-hover">
         <thead>
           <tr>
@@ -25,7 +25,7 @@ function Questions() {
           </tr>
         </thead>
         <tbody>
-          {Questiondetais.map((question, index) => (
+          {QuestionDetails.map((question, index) => (
             <tr>
               <th scope="row" key={index}>
                 {index + 1}
@@ -34,13 +34,13 @@ function Questions() {
               <td>{question.category}</td>
               <td>
                 {question.status === true ? (
-                  <button className="btn published-button">Published</button>
+                  <button className="published-button">Published</button>
                 ) : (
-                  <button className=" btn draft-button">Draft</button>
+                  <button className="draft-button">Draft</button>
                 )}
               </td>
               <td>
-                <button className="btn action-btn">...</button>
+                <button className="action-btn">...</button>
               </td>
             </tr>
           ))}

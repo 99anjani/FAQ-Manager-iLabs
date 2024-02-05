@@ -1,0 +1,14 @@
+.right-footer {
+  float: right;
+  margin-right: 3%;
+}
+.left-footer {
+  float: left;
+  margin-left: 3%;
+}
+.vertical-line {
+  border-left: 1px solid black;
+  height: 1em;
+  margin: 0 10px;
+}
+

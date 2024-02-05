@@ -1,20 +1,21 @@
 .question-table {
-  margin: 2%;
-  margin-bottom: 10px;
+  margin: 3%;
+  min-height: 70vh;
 }
 .published-button {
-  background-color: rgb(53, 195, 53);
+  background-color: #35c335;
+  border-radius: 5px;
+  border-color: transparent;
 }
-.published-button:hover {
-  background-color: rgb(53, 195, 53);
-}
+
 .draft-button {
   background-color: rgb(108, 111, 108);
+  border-radius: 5px;
+  border-color: transparent;
 }
-.draft-button:hover {
-  background-color: rgb(108, 111, 108);
-}
-.action-btn:hover {
+
+.action-btn {
   background-color: transparent;
   border-color: transparent;
 }
+
