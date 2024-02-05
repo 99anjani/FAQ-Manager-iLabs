@@ -1,0 +1,15 @@
+.navbar {
+  background-color: #cdc9f1;
+}
+.add-question-button {
+  background-color: #a9a2e0;
+}
+.add {
+  color: #420687;
+}
+.add:hover {
+  color: #15002c;
+}
+.add-question-button:hover {
+  background-color: #a9a2e0;
+}

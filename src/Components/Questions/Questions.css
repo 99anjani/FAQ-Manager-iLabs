@@ -1,0 +1,20 @@
+.question-table {
+  margin: 2%;
+  margin-bottom: 10px;
+}
+.published-button {
+  background-color: rgb(53, 195, 53);
+}
+.published-button:hover {
+  background-color: rgb(53, 195, 53);
+}
+.draft-button {
+  background-color: rgb(108, 111, 108);
+}
+.draft-button:hover {
+  background-color: rgb(108, 111, 108);
+}
+.action-btn:hover {
+  background-color: transparent;
+  border-color: transparent;
+}

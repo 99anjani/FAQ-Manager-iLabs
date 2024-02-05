@@ -1,5 +1,10 @@
 .App {
   text-align: center;
+  background-color: #cdc9f1;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
 }
 
 .App-logo {
