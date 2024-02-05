@@ -14,7 +14,6 @@ Run the Spring Boot application.
 Environment Configuration:
 Ensure Node.js, npm, and Java are installed on your system.
 Update backend API URLs in React components
- (http://localhost:8080/questions).
 
 
 Start the backend server first.
